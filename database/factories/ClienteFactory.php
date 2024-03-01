@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Cliente;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 
@@ -22,18 +23,17 @@ class ClienteFactory extends Factory
      */
     public function definition()
     {
-        
+
         return [
-            'Nombre' => $this->faker->text($this->faker->numberBetween(5, 255)),
-            'Apellido' => $this->faker->text($this->faker->numberBetween(5, 255)),
-            'Direccion' => $this->faker->text($this->faker->numberBetween(5, 255)),
-            'Telefono' => $this->faker->word,
-            'Fecha_Nac' => $this->faker->date('Y-m-d'),
-            'Estado' => $this->faker->text($this->faker->numberBetween(5, 4096)),
+            'dpi' => $this->faker->randomNumber(9, true),
+            'Nombre' => $this->faker->firstName,
+            'Apellido' => $this->faker->lastName,
+            'Direccion' => $this->faker->address,
+            'Telefono' => $this->faker->randomNumber(8, true),
+            'Fecha_Nac' => Carbon::now()->subYears(rand(18, 65)),
+            'Estado' => $this->faker->randomElement(['Activo', 'Inactivo']),
             'created_at' => $this->faker->date('Y-m-d H:i:s'),
             'updated_at' => $this->faker->date('Y-m-d H:i:s'),
-            'deleted_at' => $this->faker->date('Y-m-d H:i:s'),
-            'dpi' => $this->faker->word
         ];
     }
 }

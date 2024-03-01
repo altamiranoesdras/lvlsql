@@ -25,6 +25,6 @@ class TipoCuenta extends Model
 
     public function cuenta(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(\App\Models\Cuentum::class, 'tipo_cuenta_id');
+        return $this->hasMany(\App\Models\Cuenta::class, 'tipo_cuenta_id');
     }
 }

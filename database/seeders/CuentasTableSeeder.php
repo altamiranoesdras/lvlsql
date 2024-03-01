@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Cuenta;
 use Illuminate\Database\Seeder;
 
 class CuentasTableSeeder extends Seeder
@@ -13,6 +14,8 @@ class CuentasTableSeeder extends Seeder
      */
     public function run()
     {
-
+        Cuenta::factory()
+            ->count(10)
+            ->create();
     }
 }

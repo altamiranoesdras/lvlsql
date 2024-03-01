@@ -41,6 +41,6 @@ class Cliente extends Model
 
     public function cuenta(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(\App\Models\Cuentum::class, 'Id_Cliente');
+        return $this->hasMany(\App\Models\Cuenta::class, 'Id_Cliente');
     }
 }

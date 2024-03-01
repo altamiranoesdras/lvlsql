@@ -31,6 +31,6 @@ class TipoMoneda extends Model
 
     public function cuenta(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(\App\Models\Cuentum::class, 'moneda_id');
+        return $this->hasMany(\App\Models\Cuenta::class, 'moneda_id');
     }
 }

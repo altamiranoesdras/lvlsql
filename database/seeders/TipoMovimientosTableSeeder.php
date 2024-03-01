@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\TipoMovimiento;
 use Illuminate\Database\Seeder;
 
 class TipoMovimientosTableSeeder extends Seeder
@@ -13,6 +14,16 @@ class TipoMovimientosTableSeeder extends Seeder
      */
     public function run()
     {
+        TipoMovimiento::factory()
+            ->count(1)
+            ->create([
+                'Descripcion' => 'Deposito',
+            ]);
 
+        TipoMovimiento::factory()
+            ->count(1)
+            ->create([
+                'Descripcion' => 'Retiro',
+            ]);
     }
 }

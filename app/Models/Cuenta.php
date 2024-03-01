@@ -50,7 +50,7 @@ class Cuenta extends Model
 
     public function tipoCuenta(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(\App\Models\TipoCuentum::class, 'tipo_cuenta_id');
+        return $this->belongsTo(\App\Models\TipoCuenta::class, 'tipo_cuenta_id');
     }
 
     public function movimientos(): \Illuminate\Database\Eloquent\Relations\HasMany

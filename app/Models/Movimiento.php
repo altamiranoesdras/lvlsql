@@ -38,7 +38,7 @@ class Movimiento extends Model
 
     public function idCuenta(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(\App\Models\Cuentum::class, 'Id_Cuenta');
+        return $this->belongsTo(\App\Models\Cuenta::class, 'Id_Cuenta');
     }
 
     public function idTipomov(): \Illuminate\Database\Eloquent\Relations\BelongsTo
