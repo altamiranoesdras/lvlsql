@@ -13,17 +13,12 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class CuentaRelationManager extends RelationManager
 {
     protected static string $relationship = 'cuenta';
+    protected static ?string $title = 'Cuentas';
 
     public function form(Form $form): Form
     {
         return $form
             ->schema([
-                //        'no_cuenta' => 'required|string|max:255'
-                //'Saldo' => 'required|numeric',
-                //        'Fecha_Apertura' => 'required',
-                //        'tipo_cuenta_id' => 'required',
-                //        'Estado' => 'required|string',
-                //        'moneda_id' => 'required',
                 Forms\Components\TextInput::make('no_cuenta')
                     ->label('No Cuenta')
                     ->required()
