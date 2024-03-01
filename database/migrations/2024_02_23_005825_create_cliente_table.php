@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('cliente', function (Blueprint $table) {
             $table->id();
+            $table->integer('dpi')->nullable();
             $table->string('Nombre');
             $table->string('Apellido');
             $table->string('Direccion');
@@ -22,8 +23,7 @@ return new class extends Migration
             $table->date('Fecha_Nac');
             $table->enum('Estado', ['Activo', 'Inactivo']);
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
-            $table->integer('dpi')->nullable();
+            $table->softDeletes();
         });
     }
 
