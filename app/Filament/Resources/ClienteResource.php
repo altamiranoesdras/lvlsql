@@ -58,13 +58,7 @@ class ClienteResource extends Resource
     {
         return $table
             ->columns([
-                //dpi: numerico
-                //Nombre
-                //Apellido
-                //Direccion
-                //Telefono
-                //Fecha_Nac
-                //Estado
+
                 Tables\Columns\TextColumn::make('dpi')
                     ->label('DPI')
                     ->searchable()
@@ -77,10 +71,7 @@ class ClienteResource extends Resource
                     ->label('Apellido')
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('Direccion')
-                    ->label('Direccion')
-                    ->searchable()
-                    ->sortable(),
+
                 Tables\Columns\TextColumn::make('Telefono')
                     ->label('Telefono')
                     ->searchable()

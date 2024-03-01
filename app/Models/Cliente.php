@@ -22,7 +22,7 @@ class Cliente extends Model
         'Nombre' => 'string',
         'Apellido' => 'string',
         'Direccion' => 'string',
-        'Fecha_Nac' => 'date',
+        'Fecha_Nac' => 'date:d/m/Y',
         'Estado' => 'string'
     ];
 
