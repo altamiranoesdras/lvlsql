@@ -132,11 +132,11 @@ return [
 
         'soft_delete' => false,
 
-        'save_schema_file' => true,
+        'save_schema_file' => false,
 
         'localized' => false,
 
-        'repository_pattern' => true,
+        'repository_pattern' => false,
 
         'resources' => false,
 
