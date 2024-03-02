@@ -50,6 +50,15 @@ class ClienteResource extends Resource
                     ->label('Fecha de Nacimiento')
                     ->placeholder('Fecha de Nacimiento')
                     ->rules('required'),
+                Forms\Components\Select::make('Estado')
+                    ->label('Estado')
+                    ->placeholder('Estado')
+                    ->searchable()
+                    ->options([
+                        'activo' => 'Activo',
+                        'inactivo' => 'Inactivo',
+                    ])
+                    ->rules('required'),
 
             ]);
     }

@@ -21,10 +21,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        DB::connection()
-            ->getDoctrineSchemaManager()
-            ->getDatabasePlatform()
-            ->registerDoctrineTypeMapping('enum', 'string');
+//        DB::connection()
+//            ->getDoctrineSchemaManager()
+//            ->getDatabasePlatform()
+//            ->registerDoctrineTypeMapping('enum', 'string');
 
         Model::unguard();
     }
